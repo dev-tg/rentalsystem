@@ -1,0 +1,78 @@
+<style>
+            .my-drop-zone { border: dotted 3px lightgray; }
+            .nv-file-over { border: dotted 3px red; } /* Default class applied to drop zones on over */
+            .another-file-over-class { border: dotted 3px green; }
+
+            html, body { height: 100%; }
+
+            canvas {
+                background-color: #f3f3f3;
+                -webkit-box-shadow: 3px 3px 3px 0 #e3e3e3;
+                -moz-box-shadow: 3px 3px 3px 0 #e3e3e3;
+                box-shadow: 3px 3px 3px 0 #e3e3e3;
+                border: 1px solid #c3c3c3;
+                height: 100px;
+                margin: 6px 0 0 6px;
+            }
+        </style>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="panel panel-default card-view">
+        <div class="panel-heading">
+
+            <div class="clearfix"></div>
+
+        </div>
+        <div class="panel-wrapper collapse in">
+            <div class="panel-body">
+ <div class="  col-md-2 ">    
+                            <a ui-sref="app.home"><button  type="button" class="btn btn-default btn-outline btn-rounded"><i class="glyphicon glyphicon-chevron-left"></i>Return</button></a>
+                    </div>
+                <div class="row">
+                    <div class="col-lg-10 col-md-offset-1 col-md-10 col-sm-12 col-xs-12" style="margin-top: 40px;">
+                        <div class="panel panel-default  border-panel card-view">
+                            <div class="panel-heading">
+                                <div class="pull-left">
+                                    <h3 class="panel-title txt-dark">Post new ADD</h3>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="panel-wrapper collapse in">
+                                <div class="panel-body">
+                                    <div class="form-wrap">
+                                        <form name="addpost">
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    <label class="control-label mb-10 text-left"> <span class="help"> ADD Title</span></label>
+                                                    <input type="text" ng-required="true"class="form-control columns: -2px;" ng-model="post.title">
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-md-10">
+                                                <label class="control-label mb-10 text-left">Post description</label>
+                                                <textarea class="form-control" rows="3" cols="3" ng-model="post.description"  ng-required="true"></textarea>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="control-label mb-10 text-left" for="example-email"> <span class="help">Category</span></label>
+                                                <select class="form-control"  ng-required="true" ng-model="post.post_category_id" ng-change="selectedCategory()" ng-options="cat.id as cat.category for cat in categoryList">
+                                                    <option value="">Select Category</option>
+                                                    
+
+                                                </select>
+                                            </div>
+                                                
+                                            <!--<a ui-sref="app.newPost.VehicleOptions" ui-sref-active="active">Get Vehicle Options</a>-->
+                                            <ui-view></ui-view>
+
+                                            
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,84 @@
+<div  nv-file-drop uploader="uploader">
+  
+    <div class="form-group col-md-6">
+        <label class="control-label mb-10 text-left" for="example-email"> <span class="help">Clothing Category</span></label>
+        <select class="form-control" ng-model="post.category_id"  ng-required="true"  ng-options="clothing.id as clothing.category for clothing    in clothingCategory">
+            <option value="">Select Category</option>
+
+        </select>
+    </div>
+    <div class="form-group col-md-6">
+        <label class="control-label mb-10 text-left" for="example-email"> <span class="help">Clothing Type</span></label>
+        <select class="form-control" ng-model="post.type_id"  ng-required="true"  ng-options="clothing.id as clothing.type for clothing    in clothingTypes">
+            <option value="">Select  Type</option>
+
+        </select>
+    </div>
+    <div class="form-group col-md-6">
+        <label class="control-label mb-10 text-left">Clothing Manufacturer</label>
+        <select class="form-control" ng-model="post.manufacturer_id"  ng-required="true" ng-options="mf.id as mf.manufacturer for mf in clothingManufacturer" >
+            <option value="">Select Manufacturer</option>
+
+        </select>
+
+    </div>
+    <div class="form-group col-md-12">
+        <label class="control-label mb-10 text-left">Clothing Size</label>
+        <select class="form-control" ng-model="post.size_id"  ng-required="true" ng-options="cl.id as cl.size for cl in clothingSize">
+            <option value="">Select Size</option>
+
+        </select>
+
+    </div>
+<!--    <div class="form-group col-md-12">
+        <label class="control-label mb-10 text-left">Milage</label>
+        <input type="text" class="form-control"   ng-required="true" placeholder="Milage" ng-model="post.milage">
+    </div>-->
+
+    <div class="form-group col-md-6 mt-30 mb-30">
+        <label class="control-label mb-10 text-left">Select State</label>
+        <select class="form-control" ng-model="post.state"   ng-required="true" ng-options="state.id as state.state_name for state in states" ng-change="getCities()">
+            <option value="">Select State</option>
+        </select>
+    </div>
+    <div class="form-group col-md-6 mt-30 mb-30">
+        <label class="control-label mb-10 text-left">Select City</label>
+        <select class="form-control" ng-model="post.city"  ng-required="true" ng-options="city.id as city.city_name for city in cities">
+            <option value="">Select City</option>
+        </select>
+    </div>
+    <div class="form-group col-md-6">
+        <label class="control-label mb-10 text-left"> <span class="help"> Availability Duration</span></label>
+        <input type="text" class="form-control"  ng-required="true" ng-model="post.availability_duration">
+    </div>
+    <div class="form-group col-md-6">
+        <label class="control-label mb-10 text-left"> <span class="help"> Charges/Day </span></label>
+        <input type="text" class="form-control"  ng-required="true" ng-model="post.charge_per_day">
+    </div>
+    <div class="form-group col-md-12 well my-drop-zone" nv-file-over uploader="uploader" over-class="another-file-over-class">
+
+        <input type="file" nv-file-select uploader="uploader" multiple/>
+        <h3 ng-if="uploader.queue.length == 0" style="color:#ccc" class="col-md-offset-4">Upload or Drag Photos  </h3>
+        <ul style="display: inline">
+            <li ng-repeat="item in uploader.queue" style="display: inline">
+                
+                <div class="col-md-2">
+                    
+                    <div  ng-show="uploader.isHTML5" ng-thumb="item._file" height="150" width="200"></div>
+                    <input type="radio" name="postThumbanil" ng-click="post.thumbnail=post.post_image_id[$index];"> Post thumbnail
+                    <div>
+                    <div class="progress " style="margin-bottom: 0;">
+                        <div class="progress-bar" role="progressbar" ng-style="{ 'width': item.progress + '%' }"></div>
+                    </div>
+                </div>
+                </div>
+                <!--                <button ng-click="item.upload()">upload</button>-->
+            </li>
+        </ul>
+
+    </div>
+<div class="col-md-9">
+        <button type="submit" ng-disabled="addpost.$invalid"class="btn btn-success  mr-10" ng-click="savePost('CLOTHING')">Submit</button>
+        <button type="button" ui-sref="app.home" class="btn btn-default">Cancel</button>
+    </div>
+</div>

@@ -1,0 +1,123 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 22, 2018, 5:06:31 PM
+    Author     : dev
+*/
+.post-icons{
+
+    width: 80px;
+    height: 80px;
+    padding-top: 20px;
+}
+
+.navbar.navbar-inverse.navbar-fixed-top .nav-header .logo-wrap {
+    width: 225px;
+    padding-top: 19px;
+
+    width: 225px;
+    padding-top: 12px;
+}
+
+.main-logo{
+    height: 600px;
+    margin-left: 30px;
+}
+
+.no-marginleft{
+    margin-left: 0px !important;
+    min-height: 97vh !important; 
+}
+.minh-50{
+    min-height:50px;
+}
+#ChargesTag {
+    border: 1px solid;
+    
+    border-radius: 146px;
+    background: #6350fff2;
+    border-color: #6350fff2;
+    padding-left: 12px;
+    padding-top: 12px;
+
+    align-items: center;
+    padding-bottom: 8px;
+
+}
+ #ChargesTag #tag-key  {
+        color: white;
+        font-size: 22px
+     
+
+    }
+
+    
+ 
+
+
+ #ChargesTag #tag-value  {
+
+    color: #0a212d;
+    padding-top: 8px;
+    font-size: 21px;
+
+    }
+    #usr-box{
+        
+    margin-top: 27px;
+
+    }
+    #usr-box .heading{
+margin-top: 17px;        
+    }
+    .post-User-info{
+        width: 64px
+    }
+    #posted_by{
+        margin-top: 8px;
+    }
+    #post_subs_img{
+        width: 55%;
+    }
+#post_img_replacement_div{
+   
+    margin: 5%;
+
+}
+#noImg-msg{
+    color: #A7A8AC;
+}
+
+#avilTag{
+    
+    font-size: 16px;
+    border: solid;
+    border-width: 1px;
+    margin-top: 24px;
+    padding-top: 14px;
+    padding-bottom: 8px;
+    border-color: #e8e8e8;
+
+}
+    
+ 
+.post-strips td:hover {
+    background-color: rgba(228, 232, 227, 0.33);
+        cursor: pointer;
+    color: #171313;
+    -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+
+}
+table.dataTable,
+table.dataTable.no-footer {
+    margin: 1rem 0;
+    width: 100%!important;
+     border-top: 0px solid #DDD; 
+     border-bottom: 0px solid #DDD; 
+}
+
